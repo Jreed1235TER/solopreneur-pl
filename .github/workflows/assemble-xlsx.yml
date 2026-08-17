@@ -1,0 +1,33 @@
+name: Assemble xlsx once
+on:
+  push:
+    paths:
+      - ".xlsx-chunks/GO"
+permissions:
+  contents: write
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble xlsx and commit
+        run: |
+          python3 << 'PY'
+          import base64, pathlib
+          root = pathlib.Path(".xlsx-chunks")
+          def assemble(prefix, dest):
+              parts = sorted(root.glob(f"{prefix}.*.b64"))
+              if not parts:
+                  raise SystemExit(f"no chunks for {prefix}")
+              data = "".join(p.read_text().strip() for p in parts)
+              raw = base64.b64decode(data)
+              pathlib.Path(dest).write_bytes(raw)
+              print(dest, len(raw), raw[:4])
+          assemble("solopreneur-pl-lite", "solopreneur-pl-lite.xlsx")
+          assemble("quarterly-tax-setaside", "quarterly-tax-setaside.xlsx")
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add solopreneur-pl-lite.xlsx quarterly-tax-setaside.xlsx
+          git diff --cached --quiet || git commit -m "Add solopreneur P&L and quarterly tax set-aside workbooks"
+          git push
