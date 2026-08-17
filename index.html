@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solopreneur P&amp;L + Tax Set-Aside</title>
+  <meta name="description" content="Two free workbooks: a monthly P&amp;L and a quarterly estimated-tax set-aside planner. Enter profits. Read what to park. Not a filing tool.">
+  <style>
+    :root {
+      --paper: #f3eee4;
+      --ink: #161412;
+      --muted: #5a554c;
+      --rule: #c9c1b0;
+      --forest: #1c3d30;
+      --forest-ink: #f3eee4;
+      --amber: #8a5a10;
+      --amber-bg: #f3ddb0;
+      --card: #fffdf8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Segoe UI", system-ui, sans-serif;
+      font-size: 1.0625rem;
+      line-height: 1.55;
+    }
+    .wrap { max-width: 40rem; margin: 0 auto; padding: 1.25rem 1.15rem 3.5rem; }
+    header {
+      display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+      padding-bottom: 0.85rem; border-bottom: 2px solid var(--ink);
+    }
+    .mark { font-family: Georgia, serif; font-size: 0.92rem; }
+    .mark span { color: var(--muted); }
+    .toplinks { display: flex; gap: 0.85rem; flex-wrap: wrap; }
+    .toplink { color: var(--forest); font-weight: 650; }
+    h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(1.85rem, 5.4vw, 2.45rem);
+      line-height: 1.15; letter-spacing: -0.02em;
+      margin: 1.6rem 0 0.75rem;
+    }
+    .lede { font-size: 1.125rem; margin: 0 0 1.4rem; }
+    .who { margin: 0 0 1.6rem; padding: 0.85rem 1rem; background: var(--card); border: 1px solid var(--rule); }
+    .who strong { display: block; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+    h2 { font-family: Georgia, serif; font-size: 1.25rem; margin: 2rem 0 0.65rem; padding-top: 0.4rem; border-top: 1px solid var(--rule); }
+    ol.steps { margin: 0; padding: 0; list-style: none; counter-reset: step; }
+    ol.steps li { counter-increment: step; display: grid; grid-template-columns: 2rem 1fr; gap: 0.55rem; padding: 0.55rem 0; border-bottom: 1px dashed var(--rule); }
+    ol.steps li::before { content: counter(step); font-family: Georgia, serif; font-weight: 700; color: var(--forest); }
+    .files, .prices, .cta-row { display: grid; gap: 0.7rem; }
+    @media (min-width: 640px) { .files, .prices, .cta-row { grid-template-columns: 1fr 1fr; } }
+    .file, .tier { background: var(--card); border: 1px solid var(--rule); padding: 0.9rem 1rem; }
+    .file h3, .tier h3 { margin: 0 0 0.2rem; font-size: 1.05rem; }
+    .tag { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.5rem; }
+    .coming { display: inline-block; margin-top: 0.65rem; font-size: 0.85rem; color: var(--amber); background: var(--amber-bg); padding: 0.2rem 0.45rem; font-weight: 650; }
+    .cta { display: block; text-align: center; background: var(--forest); color: var(--forest-ink); text-decoration: none; font-weight: 700; padding: 0.95rem 1rem; }
+    .cta.alt { background: var(--card); color: var(--forest); border: 2px solid var(--forest); }
+    .cta-note { text-align: center; color: var(--muted); font-size: 0.92rem; }
+    footer { margin-top: 2.2rem; padding-top: 0.9rem; border-top: 2px solid var(--ink); color: var(--muted); font-size: 0.92rem; }
+    footer strong { color: var(--ink); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="mark">Solopreneur P&amp;L <span>+ tax set-aside</span></div>
+      <div class="toplinks">
+        <a class="toplink" href="solopreneur-pl-lite.xlsx" download>Monthly</a>
+        <a class="toplink" href="quarterly-tax-setaside.xlsx" download>Quarterly</a>
+      </div>
+    </header>
+    <h1>See the month. Park the quarter.</h1>
+    <p class="lede">Two free files. A one-person monthly P&amp;L, and a quarterly worksheet to plan estimated-tax set-asides from those profits.</p>
+    <div class="who">
+      <strong>Who it’s for</strong>
+      Freelancers and solo operators who already track monthly profit and need a quarterly parking plan — not a bookkeeping suite, and not a filing tool.
+    </div>
+    <h2>Two free files</h2>
+    <div class="files">
+      <div class="file">
+        <h3>Monthly P&amp;L lite</h3>
+        <div class="tag">Free · solopreneur-pl-lite.xlsx</div>
+        <p>Enter revenue and expenses. Read profit and the amount to park for tax. One set-aside % on Setup.</p>
+      </div>
+      <div class="file">
+        <h3>Quarterly tax set-aside</h3>
+        <div class="tag">Free · quarterly-tax-setaside.xlsx</div>
+        <p>Type three monthly profits (or a quarter total). Read suggested set-aside, YTD, and an optional 100%/110% rule-of-thumb compare.</p>
+      </div>
+    </div>
+    <h2>Monthly — 60 seconds</h2>
+    <ol class="steps">
+      <li>Download the lite workbook (Excel or Google Sheets).</li>
+      <li>Enter this month’s revenue and expenses. Blank cells count as zero.</li>
+      <li>Read Tax / set-aside and profit after set-aside. Change the % on Setup anytime.</li>
+    </ol>
+    <h2>Quarterly — 60 seconds</h2>
+    <ol class="steps">
+      <li>Download the quarterly workbook.</li>
+      <li>Copy each quarter’s three monthly profits from the lite file, or type a quarter total.</li>
+      <li>Read suggested set-aside and cumulative YTD.</li>
+    </ol>
+    <h2>Free catalog and Pro</h2>
+    <div class="prices">
+      <div class="tier">
+        <h3>Free</h3>
+        <div class="tag">Both files</div>
+        <p>Monthly P&amp;L lite and the quarterly set-aside worksheet. Example year included so the math is visible on first open.</p>
+      </div>
+      <div class="tier">
+        <h3>Pro</h3>
+        <div class="tag">Later</div>
+        <p>Paid pack later. Not built yet.</p>
+        <span class="coming">Coming — Polar checkout</span>
+      </div>
+    </div>
+    <div class="cta-row">
+      <a class="cta" href="solopreneur-pl-lite.xlsx" download>Download monthly lite</a>
+      <a class="cta alt" href="quarterly-tax-setaside.xlsx" download>Download quarterly set-aside</a>
+    </div>
+    <p class="cta-note">Both free · formula-only · Excel or Google Sheets</p>
+    <footer>
+      <p><strong>Built by an AI agent working for Jeremy Reed. Not tax, legal, or financial advice.</strong></p>
+      <p>The set-aside percentage is what you choose to park, not a prepared return. Replace the EXAMPLE numbers before you rely on a month or quarter. Independent project. Not TER.</p>
+    </footer>
+  </div>
+</body>
+</html>
