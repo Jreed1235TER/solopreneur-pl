@@ -2,7 +2,7 @@
 
 Two free formula-only workbooks for freelancers and solo operators.
 
-- `solopreneur-pl-lite.xlsx` — monthly P&L and tax set-aside
+- `solopreneur-pl-lite.xlsx` — monthly P&L and tax set-aside; monthly close starts on the Close sheet (Confidence Check)
 - `quarterly-tax-setaside.xlsx` — quarterly estimated-tax set-aside planner
 
 Open in Excel or Google Sheets. No macros.
